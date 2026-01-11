@@ -37,7 +37,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 const typescript_eslint_1 = __importDefault(require("typescript-eslint"));
 const eslint_plugin_1 = __importDefault(require("@stylistic/eslint-plugin"));
-// @ts-ignore - eslint-plugin-import doesn't have proper types
 const importPlugin = __importStar(require("eslint-plugin-import"));
 const config = [
     // TypeScript ESLint recommended config

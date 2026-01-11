@@ -1,7 +1,6 @@
 import type { Linter } from 'eslint';
 import tseslint from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
-// @ts-ignore - eslint-plugin-import doesn't have proper types
 import * as importPlugin from 'eslint-plugin-import';
 
 const config: Linter.Config[] = [

@@ -31,7 +31,7 @@ export default [
 Or if using CommonJS:
 
 ```javascript
-const metapicConfig = require('@metapic/eslint-config').default;
+const metapicConfig = require('@metapic/eslint-config');
 
 module.exports = [
   ...metapicConfig,
