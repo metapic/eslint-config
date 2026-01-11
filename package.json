@@ -1,0 +1,38 @@
+{
+  "name": "@metapic/eslint-config",
+  "version": "1.0.0",
+  "description": "Shareable ESLint config for Metapic projects",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "typescript"
+  ],
+  "author": "Metapic",
+  "license": "ISC",
+  "peerDependencies": {
+    "eslint": "^9.0.0",
+    "typescript": "^5.0.0"
+  },
+  "devDependencies": {
+    "@stylistic/eslint-plugin": "^5.7.0",
+    "@types/node": "^25.0.6",
+    "eslint": "^9.39.2",
+    "eslint-plugin-import": "^2.32.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.52.0"
+  },
+  "dependencies": {
+    "@stylistic/eslint-plugin": "^5.7.0",
+    "eslint-plugin-import": "^2.32.0",
+    "typescript-eslint": "^8.52.0"
+  }
+}
