@@ -30,23 +30,23 @@
     "node": ">= 20"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
+    "access": "public"
   },
   "keywords": [
     "eslint"
   ],
   "peerDependencies": {
-    "@eslint/js": ">=9",
-    "@stylistic/eslint-plugin": ">=5",
-    "@typescript-eslint/eslint-plugin": ">=8",
-    "@typescript-eslint/parser": ">=8",
-    "eslint": ">=9",
-    "eslint-config-prettier": ">=10",
-    "eslint-import-resolver-typescript": ">=4",
-    "eslint-plugin-import": ">=2",
-    "eslint-plugin-prettier": ">=5",
-    "prettier": ">=3",
-    "typescript-eslint": ">=8"
+    "@eslint/js": ">= 9",
+    "@stylistic/eslint-plugin": ">= 5",
+    "@typescript-eslint/eslint-plugin": ">= 8",
+    "@typescript-eslint/parser": ">= 8",
+    "eslint": ">= 9",
+    "eslint-config-prettier": ">= 10",
+    "eslint-import-resolver-typescript": ">= 4",
+    "eslint-plugin-import": ">= 2",
+    "eslint-plugin-prettier": ">= 5",
+    "prettier": ">= 3",
+    "typescript-eslint": ">= 8"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
