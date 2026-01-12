@@ -7,7 +7,7 @@ Standard ESLint configuration for Metapic projects. See [`index.ts`](./src/index
 Install the package
 
 ```
-pnpm add -D @metapic/eslint-config
+pnpm add -D eslint @metapic/eslint-config
 ```
 
 Create an `eslint.config.mts` file:
