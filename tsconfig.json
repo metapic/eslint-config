@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "es6",
+    "module": "commonjs",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "outDir": "./dist/",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "strictBindCallApply": true,
+    "noFallthroughCasesInSwitch": true,
+  },
+  "include": [
+    "*.mts",
+    "src/**/*.ts",
+    "test/**/*.ts"
+  ]
+}

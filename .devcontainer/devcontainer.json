@@ -1,0 +1,17 @@
+{
+  "name": "metapic/eslint-config",
+  "image": "mcr.microsoft.com/devcontainers/typescript-node:24",
+  "features": {
+    "ghcr.io/dstockhammer/devcontainer-features/zsh:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "github.vscode-github-actions",
+        "github.vscode-pull-request-github",
+        "streetsidesoftware.code-spell-checker"
+      ]
+    }
+  }
+}

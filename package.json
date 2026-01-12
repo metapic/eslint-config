@@ -1,0 +1,86 @@
+{
+  "name": "@metapic/eslint-config",
+  "version": "0.0.0-development",
+  "description": "Standard ESLint configuration for Metapic projects.",
+  "main": "./dist/index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "homepage": "https://github.com/metapic/eslint-config",
+  "bugs": {
+    "url": "https://github.com/metapic/eslint-config/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/metapic/eslint-config.git"
+  },
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "clean": "rm -rf ./dist",
+    "lint": "tsc --noEmit && eslint --cache",
+    "lint:fix": "tsc --noEmit && eslint --cache --fix",
+    "semantic-release": "semantic-release"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Daniel Stockhammer",
+    "url": "https://github.com/dstockhammer"
+  },
+  "engines": {
+    "node": ">= 20"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
+  "keywords": [
+    "eslint"
+  ],
+  "peerDependencies": {
+    "@eslint/js": ">=9",
+    "@stylistic/eslint-plugin": ">=5",
+    "@typescript-eslint/eslint-plugin": ">=8",
+    "@typescript-eslint/parser": ">=8",
+    "eslint": ">=9",
+    "eslint-config-prettier": ">=10",
+    "eslint-import-resolver-typescript": ">=4",
+    "eslint-plugin-import": ">=2",
+    "eslint-plugin-prettier": ">=5",
+    "prettier": ">=3",
+    "typescript-eslint": ">=8"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@stylistic/eslint-plugin": "^5.7.0",
+    "@types/node": "^25.0.3",
+    "@typescript-eslint/eslint-plugin": "^8.50.0",
+    "@typescript-eslint/parser": "^8.50.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-prettier": "^5.5.4",
+    "jiti": "^2.6.1",
+    "prettier": "^3.7.4",
+    "semantic-release": "^25.0.2",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.52.0"
+  },
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/github",
+        {
+          "assets": [
+            "dist/**"
+          ]
+        }
+      ]
+    ]
+  }
+}
