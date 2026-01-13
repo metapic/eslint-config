@@ -19,7 +19,7 @@ import globals from 'globals'
 
 export default defineConfig([
   {
-    extends: [metapic.config],
+    extends: [metapic.configs.recommended],
     languageOptions: {
       globals: {
         ...globals.node,
