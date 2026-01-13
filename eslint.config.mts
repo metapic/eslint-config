@@ -1,11 +1,11 @@
 import { defineConfig } from 'eslint/config'
 import globals from 'globals'
 
-import { config } from './src/index'
+import { configs } from './src/index'
 
 export default defineConfig([
   {
-    extends: [config],
+    extends: [configs.recommended],
     languageOptions: {
       globals: {
         ...globals.node,
