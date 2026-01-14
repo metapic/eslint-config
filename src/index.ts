@@ -6,7 +6,7 @@ import prettierPlugin from 'eslint-plugin-prettier/recommended'
 import tseslint from 'typescript-eslint'
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-export type MetapicCustomizeOptions = {
+type MetapicCustomizeOptions = {
   // WIP
 }
 
@@ -152,4 +152,8 @@ const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
 
 export const configs = {
   recommended: customize(),
+}
+
+export default {
+  configs,
 }
