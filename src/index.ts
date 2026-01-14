@@ -10,7 +10,6 @@ export type MetapicCustomizeOptions = {
   // WIP
 }
 
-// todo: nothing to customise right now -- WIP
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
   eslint.configs.recommended,
@@ -118,9 +117,6 @@ const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
    */
   {
     ...prettierPlugin,
-    // rules: {
-    //   'prettier/prettier': ['error', opts],
-    // },
   },
 
   /**
@@ -155,6 +151,5 @@ const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
 ]
 
 export const configs = {
-  customize,
   recommended: customize(),
 }
