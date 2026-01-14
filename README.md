@@ -1,10 +1,10 @@
 # Metapic eslint-config
 
-Standard ESLint configuration for Metapic projects. See [`index.ts`](./src/index.ts) for the specific rules.
+Standard [ESLint configuration](https://eslint.org/docs/latest/extend/shareable-configs) for Metapic projects. See [`index.ts`](./src/index.ts) for the specific rules.
 
 ## Usage
 
-Install the package
+Install the package:
 
 ```
 pnpm add -D jiti eslint @metapic/eslint-config
