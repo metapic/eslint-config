@@ -48,11 +48,22 @@ const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
   },
 
   /**
-   * Stylistic
+   * Stylistic and Prettier
    * see https://eslint.style/rules
+   * see https://github.com/prettier/eslint-plugin-prettier
+   * see https://prettier.io/docs/options
+   *
+   * The sole reason we are using Prettier is to get automatic formatting
+   * for printWidth (max-len in stylistic). ESLint currently cannot
+   * autoformat that rule, so we use Prettier just for that.
+   *
+   * The order of merging is important here: Prettier disables some Stylistic
+   * rules that it handles itself. We re-enable some of them below with
+   * our own preferences.
    */
+  stylistic.configs.recommended,
+  prettierPlugin,
   {
-    ...stylistic.configs.recommended,
     rules: {
       // some rules are handled by Prettier (for now at least)
       // '@stylistic/array-bracket-spacing': ['error', 'never'],
@@ -86,9 +97,9 @@ const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
    * Import plugin
    * see https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/order.md
    */
+  importPlugin.flatConfigs.recommended,
+  importPlugin.flatConfigs.typescript,
   {
-    ...importPlugin.flatConfigs.recommended,
-    ...importPlugin.flatConfigs.typescript,
     languageOptions: {
       ecmaVersion: 'latest',
       sourceType: 'module',
@@ -104,19 +115,6 @@ const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
       'import/no-relative-parent-imports': ['error', { ignore: ['@/'] }],
       'import/order': ['error', { 'newlines-between': 'always' }],
     },
-  },
-
-  /**
-   * Prettier
-   * see https://github.com/prettier/eslint-plugin-prettier
-   * see https://prettier.io/docs/options
-   *
-   * The sole reason we are using prettier is to get automatic formatting
-   * for printWidth (max-len in stylistic). ESLint currently cannot
-   * autoformat that rule, so we use prettier just for that.
-   */
-  {
-    ...prettierPlugin,
   },
 
   /**
