@@ -54,7 +54,7 @@ const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
   {
     ...stylistic.configs.recommended,
     rules: {
-      // handled by Prettier
+      // some rules are handled by Prettier (for now at least)
       // '@stylistic/array-bracket-spacing': ['error', 'never'],
       // '@stylistic/arrow-parens': ['error', 'always'],
       // '@stylistic/brace-style': ['error', '1tbs'],
@@ -65,7 +65,7 @@ const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
       // '@stylistic/no-trailing-spaces': 'error',
       // '@stylistic/object-curly-spacing': ['error', 'always'],
       // '@stylistic/operator-linebreak': ['error', 'before', { overrides: { '=': 'after' } }],
-      // '@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
+      '@stylistic/quotes': ['error', 'single', { avoidEscape: true }],
       // '@stylistic/semi': ['error', 'never'],
       // '@stylistic/space-in-parens': ['error', 'never'],
       '@stylistic/member-delimiter-style': [
