@@ -4,7 +4,9 @@
   "description": "Standard ESLint configuration for Metapic projects.",
   "type": "module",
   "exports": "./dist/index.js",
-  "files": ["dist/**/*"],
+  "files": [
+    "dist/**/*"
+  ],
   "homepage": "https://github.com/metapic/eslint-config",
   "bugs": {
     "url": "https://github.com/metapic/eslint-config/issues"
@@ -31,7 +33,9 @@
   "publishConfig": {
     "access": "public"
   },
-  "keywords": ["eslint"],
+  "keywords": [
+    "eslint"
+  ],
   "peerDependencies": {
     "@eslint/js": ">= 9",
     "@metapic/prettier-config": ">= 1",
@@ -48,24 +52,26 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.39.2",
-    "@metapic/prettier-config": "^1.0.1",
+    "@metapic/prettier-config": "^1.0.2",
     "@stylistic/eslint-plugin": "^5.7.0",
-    "@types/node": "^25.0.3",
-    "@typescript-eslint/eslint-plugin": "^8.50.0",
-    "@typescript-eslint/parser": "^8.50.0",
+    "@types/node": "^25.0.9",
+    "@typescript-eslint/eslint-plugin": "^8.53.1",
+    "@typescript-eslint/parser": "^8.53.1",
     "eslint": "^9.39.2",
     "eslint-config-prettier": "^10.1.8",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import": "^2.32.0",
-    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-prettier": "^5.5.5",
     "jiti": "^2.6.1",
-    "prettier": "^3.7.4",
+    "prettier": "^3.8.0",
     "semantic-release": "^25.0.2",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.52.0"
+    "typescript-eslint": "^8.53.1"
   },
   "release": {
-    "branches": ["main"],
+    "branches": [
+      "main"
+    ],
     "plugins": [
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
@@ -73,7 +79,9 @@
       [
         "@semantic-release/github",
         {
-          "assets": ["dist/**"]
+          "assets": [
+            "dist/**"
+          ]
         }
       ]
     ]

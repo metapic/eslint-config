@@ -15,7 +15,7 @@ const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
   eslint.configs.recommended,
 
   {
-    ignores: ['node_modules/', 'dist/', 'dist-*/', 'coverage/', '.*/'],
+    ignores: ['node_modules/', 'dist/', 'dist-*/', 'coverage/', 'public/', '.*/'],
   },
 
   /**
@@ -122,6 +122,8 @@ const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
    */
   {
     rules: {
+      curly: ['error', 'all'],
+
       'no-console': 'error',
       'no-restricted-syntax': [
         'error',
@@ -132,7 +134,9 @@ const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
             '[callee.object.name=/logger/i]' +
             "[arguments.0.type='TemplateLiteral']" +
             '[arguments.0.expressions.length>0]',
-          message: 'Do not use interpolated template literals in logger messages. Use a plain string with structured metadata instead.',
+          message:
+            'Do not use interpolated template literals in logger messages.' +
+            ' Use a plain string with structured metadata instead.',
         },
         {
           selector:
@@ -141,7 +145,9 @@ const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
             '[callee.object.property.name=/logger/i]' +
             "[arguments.0.type='TemplateLiteral']" +
             '[arguments.0.expressions.length>0]',
-          message: 'Do not use interpolated template literals in logger messages. Use a plain string with structured metadata instead.',
+          message:
+            'Do not use interpolated template literals in logger messages.' +
+            ' Use a plain string with structured metadata instead.',
         },
       ],
     },
