@@ -113,7 +113,18 @@ const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
     rules: {
       'import/no-named-as-default-member': 'off',
       'import/no-relative-parent-imports': ['error', { ignore: ['@/'] }],
-      'import/order': ['error', { 'newlines-between': 'always' }],
+      'import/order': [
+        'error',
+        {
+          'newlines-between': 'always',
+          named: true,
+          alphabetize: {
+            order: 'asc',
+            orderImportKind: 'asc',
+            caseInsensitive: true,
+          },
+        },
+      ],
     },
   },
 
