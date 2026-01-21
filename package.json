@@ -18,8 +18,8 @@
   "scripts": {
     "build": "tsc --project tsconfig.build.json",
     "clean": "rm -rf ./dist",
-    "lint": "tsc --noEmit && eslint --cache",
-    "lint:fix": "tsc --noEmit && eslint --cache --fix",
+    "lint": "tsc && eslint --cache",
+    "lint:fix": "tsc && eslint --cache --fix",
     "semantic-release": "semantic-release"
   },
   "license": "MIT",

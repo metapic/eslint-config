@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "incremental": true,
+    "noEmit": true,
     "target": "es6",
     "module": "node20",
     "moduleResolution": "node16",
@@ -8,9 +9,9 @@
     "declarationMap": true,
     "sourceMap": true,
     "outDir": "./dist/",
+    "strict": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,
-    "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "strictNullChecks": true,
     "noImplicitAny": true,
