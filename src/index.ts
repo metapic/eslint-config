@@ -1,6 +1,6 @@
 import eslint from '@eslint/js'
 import stylistic from '@stylistic/eslint-plugin'
-import { Linter } from 'eslint'
+import { type Linter } from 'eslint'
 import importPlugin from 'eslint-plugin-import'
 import prettierPlugin from 'eslint-plugin-prettier/recommended'
 import tseslint from 'typescript-eslint'
@@ -42,6 +42,14 @@ const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
         {
           argsIgnorePattern: '^_',
           varsIgnorePattern: '^_',
+        },
+      ],
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        {
+          disallowTypeAnnotations: false,
+          fixStyle: 'inline-type-imports',
+          prefer: 'type-imports',
         },
       ],
     },
