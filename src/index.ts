@@ -185,6 +185,7 @@ const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
 ]
 
 export const configs = {
+  customize,
   recommended: customize(),
 }
 
