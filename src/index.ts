@@ -5,17 +5,25 @@ import importPlugin from 'eslint-plugin-import'
 import prettierPlugin from 'eslint-plugin-prettier/recommended'
 import tseslint from 'typescript-eslint'
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
 type MetapicCustomizeOptions = {
-  // WIP
+  extraIgnores?: string[]
+  extraAllowedImports?: string[]
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
   eslint.configs.recommended,
 
   {
-    ignores: ['node_modules/', 'dist/', 'dist-*/', 'coverage/', 'public/', '.*/'],
+    ignores: [
+      '**/.*',
+      '**/.*/',
+      '**/node_modules/',
+      '**/dist/',
+      '**/dist-*/',
+      '**/coverage/',
+      'public/',
+      ...(options?.extraIgnores ?? []),
+    ],
   },
 
   /**
@@ -120,7 +128,10 @@ const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
     },
     rules: {
       'import/no-named-as-default-member': 'off',
-      'import/no-relative-parent-imports': ['error', { ignore: ['@/'] }],
+      'import/no-relative-parent-imports': [
+        'error',
+        { ignore: ['@/', ...(options?.extraAllowedImports ?? [])] },
+      ],
       'import/order': [
         'error',
         {
