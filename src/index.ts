@@ -1,5 +1,6 @@
 import eslint from '@eslint/js'
 import stylistic from '@stylistic/eslint-plugin'
+import vitest from '@vitest/eslint-plugin'
 import { type Linter } from 'eslint'
 import importPlugin from 'eslint-plugin-import'
 import prettierPlugin from 'eslint-plugin-prettier/recommended'
@@ -144,6 +145,20 @@ const customize = (options?: MetapicCustomizeOptions): Linter.Config[] => [
           },
         },
       ],
+    },
+  },
+
+  /**
+   * Vitest support
+   * see https://github.com/vitest-dev/eslint-plugin-vitest
+   */
+  {
+    plugins: {
+      vitest,
+    },
+    rules: {
+      ...vitest.configs.recommended.rules,
+      'vitest/padding-around-all': 'warn',
     },
   },
 
