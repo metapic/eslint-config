@@ -28,7 +28,7 @@
     "url": "https://github.com/dstockhammer"
   },
   "engines": {
-    "node": ">= 20"
+    "node": ">= 22"
   },
   "publishConfig": {
     "access": "public"
